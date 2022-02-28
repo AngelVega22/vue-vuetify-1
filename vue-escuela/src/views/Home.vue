@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <section>
     <!-- <v-layout wrap>
       <v-flex class="primary" xs12 md6 lg12>
         <h1>lorem</h1>
@@ -19,13 +19,21 @@
         <h1 class="text-center">lorem</h1></v-flex
       >
     </v-layout> -->
-  </v-container>
+    <Carousel />
+
+    <Cards />
+  </section>
 </template>
 
 <script>
+import Carousel from "../components/Carousel";
+import Cards from "../components/Cards";
 export default {
   name: "Home",
 
-  components: {},
+  components: {
+    Carousel,
+    Cards,
+  },
 };
 </script>
