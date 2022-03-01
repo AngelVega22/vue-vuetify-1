@@ -1,4 +1,6 @@
-
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap");
+</style>
 <template>
   <v-container>
     <v-layout justify-center>

@@ -18,9 +18,9 @@
       ></v-layout
     >
     <v-layout justify-center align-center mb-5>
-      <v-flex class="display-1" mb-5 mt-5>
+      <v-flex class="h4" mb-5 mt-5>
         <input
-          class="outlined pa-1"
+          class="outlined pa-2"
           type="text"
           v-model="search"
           placeholder="Buscar cursos"
@@ -31,7 +31,7 @@
       >
     </v-layout>
 
-    <v-layout wrap>
+    <v-layout justify-center align-center wrap>
       <v-flex
         v-for="categoria in filteredCourses"
         mb-5
@@ -57,40 +57,36 @@
 </template>
 <script>
 export default {
-  name: "Cards",
+  name: "Cursos",
   data: () => ({
     show: false,
     categorias: [
       {
         id: 1,
-        nombre: "Marketing Digital",
-        subtitulo: "Cursos de marketing digital",
-        descripcion:
-          "El mercadeo digital es el componente de la mercadotecnia que utiliza internet y tecnologías digitales en línea, como computadoras de escritorio, teléfonos móviles y otras plataformas y medios digitales para promover productos y servicios.​​",
+        nombre: "Community Manager",
+        subtitulo: "curso de community Manager",
+        descripcion: "​​",
         url: " /img/mktdig.jpg",
       },
       {
         id: 2,
-        nombre: "Desarrollo Web",
-        subtitulo: "Cursos de desarrollo web",
-        descripcion:
-          "Desarrollo web es un término que define la creación de sitios web para Internet o una intranet.​​",
+        nombre: "Branding",
+        subtitulo: "curso de branding",
+        descripcion: "",
         url: "/img/dweb.jpg",
       },
       {
         id: 3,
-        nombre: "Diseño gráfico",
-        subtitulo: "Cursos de diseño gráfico",
-        descripcion:
-          "El diseño gráfico es la profesión y disciplina académica cuya actividad consiste en proyectar comunicaciones visuales destinadas a transmitir mensajes específicos a grupos sociales con objetivos determinados.",
+        nombre: "Facebook y whatsApp",
+        subtitulo: "curso de facebook y whatsapp",
+        descripcion: "",
         url: "/img/disgr.jpg",
       },
       {
         id: 4,
-        nombre: "Audiovisual",
-        subtitulo: "Cursos de audivisual",
-        descripcion:
-          "El concepto audiovisual significa la integración e interrelación plena entre lo auditivo y lo visual para producir una nueva realidad o lenguaje. La percepción es simultánea. Se crean así nuevas realidades sentidos|sensoriales mediante mecanismos como la armonía, complementaria, refuerzo y contraste.",
+        nombre: "Taller instagram",
+        subtitulo: "taller de instagram",
+        descripcion: "",
         url: "/img/audi.jpg",
       },
     ],
