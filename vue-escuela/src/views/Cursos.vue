@@ -4,7 +4,7 @@
 <template>
   <v-container>
     <v-layout justify-center>
-      <v-flex class="display-1 pa-5 mb-5 mt-5" yapaycolor--text>
+      <v-flex class="display-1 pa-5 mb-5 mt-5" yapaycolor--text xs12>
         <h1
           class="text-center font-weight-thin"
           style="font-family: 'Leckerli One', cursive"
@@ -14,9 +14,22 @@
       ></v-layout
     >
     <v-spacer></v-spacer>
+    <v-layout>
+      <v-flex justify-center>
+        <input type="text" v-model="search" placeholder="Buscar cursos" />
+      </v-flex>
+    </v-layout>
 
     <v-layout wrap>
-      <v-flex v-for="categoria in categorias" xs3 mb-5 :key="categoria.id">
+      <v-flex
+        v-for="categoria in filteredCourses"
+        mb-5
+        :key="categoria.id"
+        xs12
+        sm6
+        md4
+        lg3
+      >
         <v-card class="mt-5" max-width="344">
           <v-img :src="categoria.url" height="200px"></v-img>
 
@@ -101,6 +114,14 @@ export default {
         url: "/img/audi.jpg",
       },
     ],
+    search: "",
   }),
+  computed: {
+    filteredCourses: function () {
+      return this.categorias.filter((categoria) => {
+        return categoria.subtitulo.match(this.search);
+      });
+    },
+  },
 };
 </script>

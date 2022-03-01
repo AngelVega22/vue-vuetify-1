@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-toolbar elevation="4" prominent>
+    <v-app-bar prominent>
       <div>
         <v-container>
           <a href="/">
@@ -23,12 +23,13 @@
               <p class="white--text">Cursos</p>
             </v-btn>
             <v-btn text large> <p class="white--text">Contacto</p> </v-btn>
-              </v-btn>
-            <v-btn text large href="https://yapaydigital.pe/"> <p class="white--text">Agencia</p> </v-btn>
+            <v-btn text large href="https://yapaydigital.pe/">
+              <p class="white--text">Agencia</p>
+            </v-btn>
           </v-container>
         </v-tabs>
       </template>
-    </v-toolbar>
+    </v-app-bar>
 
     <v-main>
       <router-view />

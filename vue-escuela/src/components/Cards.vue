@@ -1,10 +1,8 @@
-<style>
-@import url("https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap");
-</style>
+
 <template>
   <v-container>
     <v-layout justify-center>
-      <v-flex class="display-1 pa-5 mb-5 mt-5" xs3 yapaycolor--text>
+      <v-flex class="display-1 pa-5 mb-5 mt-5" yapaycolor--text xs12>
         <h1
           class="text-center font-weight-thin"
           style="font-family: 'Leckerli One', cursive"
@@ -14,9 +12,15 @@
       ></v-layout
     >
     <v-spacer></v-spacer>
-
-    <v-layout>
-      <v-flex v-for="categoria in categorias" xs3 :key="categoria.id">
+    <v-layout wrap>
+      <v-flex
+        v-for="categoria in categorias"
+        xs12
+        sm6
+        md4
+        lg3
+        :key="categoria.id"
+      >
         <v-card class="mt-5" max-width="344">
           <v-img :src="categoria.url" height="200px"></v-img>
 
@@ -61,7 +65,7 @@ export default {
         url: "/img/disgr.jpg",
       },
       {
-        id: 3,
+        id: 4,
         nombre: "Audivisual",
         subtitulo: "Cursos de audivisual",
         descripcion:
