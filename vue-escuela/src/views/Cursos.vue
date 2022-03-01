@@ -1,5 +1,9 @@
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap");
+.outlined {
+  border: thin solid #00849d;
+  border-radius: 2%;
+}
 </style>
 <template>
   <v-container>
@@ -13,11 +17,18 @@
         </h1></v-flex
       ></v-layout
     >
-    <v-spacer></v-spacer>
-    <v-layout>
-      <v-flex justify-center>
-        <input type="text" v-model="search" placeholder="Buscar cursos" />
-      </v-flex>
+    <v-layout justify-center align-center mb-5>
+      <v-flex class="display-1" mb-5 mt-5>
+        <input
+          class="outlined pa-1"
+          type="text"
+          v-model="search"
+          placeholder="Buscar cursos"
+        />
+        <v-btn icon>
+          <v-icon>mdi-magnify</v-icon>
+        </v-btn></v-flex
+      >
     </v-layout>
 
     <v-layout wrap>
@@ -41,6 +52,7 @@
         </v-card>
       </v-flex>
     </v-layout>
+    <v-container style="height: 70vh"></v-container>
   </v-container>
 </template>
 <script>
@@ -75,39 +87,7 @@ export default {
       },
       {
         id: 4,
-        nombre: "Audivisual",
-        subtitulo: "Cursos de audivisual",
-        descripcion:
-          "El concepto audiovisual significa la integración e interrelación plena entre lo auditivo y lo visual para producir una nueva realidad o lenguaje. La percepción es simultánea. Se crean así nuevas realidades sentidos|sensoriales mediante mecanismos como la armonía, complementaria, refuerzo y contraste.",
-        url: "/img/audi.jpg",
-      },
-      {
-        id: 5,
-        nombre: "Audivisual",
-        subtitulo: "Cursos de audivisual",
-        descripcion:
-          "El concepto audiovisual significa la integración e interrelación plena entre lo auditivo y lo visual para producir una nueva realidad o lenguaje. La percepción es simultánea. Se crean así nuevas realidades sentidos|sensoriales mediante mecanismos como la armonía, complementaria, refuerzo y contraste.",
-        url: "/img/audi.jpg",
-      },
-      {
-        id: 5,
-        nombre: "Audivisual",
-        subtitulo: "Cursos de audivisual",
-        descripcion:
-          "El concepto audiovisual significa la integración e interrelación plena entre lo auditivo y lo visual para producir una nueva realidad o lenguaje. La percepción es simultánea. Se crean así nuevas realidades sentidos|sensoriales mediante mecanismos como la armonía, complementaria, refuerzo y contraste.",
-        url: "/img/audi.jpg",
-      },
-      {
-        id: 5,
-        nombre: "Audivisual",
-        subtitulo: "Cursos de audivisual",
-        descripcion:
-          "El concepto audiovisual significa la integración e interrelación plena entre lo auditivo y lo visual para producir una nueva realidad o lenguaje. La percepción es simultánea. Se crean así nuevas realidades sentidos|sensoriales mediante mecanismos como la armonía, complementaria, refuerzo y contraste.",
-        url: "/img/audi.jpg",
-      },
-      {
-        id: 5,
-        nombre: "Audivisual",
+        nombre: "Audiovisual",
         subtitulo: "Cursos de audivisual",
         descripcion:
           "El concepto audiovisual significa la integración e interrelación plena entre lo auditivo y lo visual para producir una nueva realidad o lenguaje. La percepción es simultánea. Se crean así nuevas realidades sentidos|sensoriales mediante mecanismos como la armonía, complementaria, refuerzo y contraste.",
