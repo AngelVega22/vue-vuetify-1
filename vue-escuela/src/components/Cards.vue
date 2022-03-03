@@ -1,9 +1,10 @@
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap");
 </style>
+
 <template>
   <v-container>
-    <v-layout justify-center>
+    <v-layout justify-center wrap>
       <v-flex class="display-1 pa-5 mb-5 mt-5" yapaycolor--text xs12>
         <h1
           class="text-center font-weight-thin"
@@ -14,7 +15,8 @@
       ></v-layout
     >
     <v-spacer></v-spacer>
-    <v-layout wrap>
+
+    <v-layout justify-center align-center wrap>
       <v-flex
         v-for="categoria in categorias"
         xs12
@@ -23,7 +25,7 @@
         lg3
         :key="categoria.id"
       >
-        <v-card class="mt-5" max-width="344">
+        <v-card class="mx-auto mt-5" max-width="360">
           <v-img :src="categoria.url" height="200px"></v-img>
 
           <v-card-title> {{ categoria.nombre }} </v-card-title>
@@ -34,8 +36,10 @@
         </v-card>
       </v-flex>
     </v-layout>
+    <v-container style="height: 10vh"> </v-container>
   </v-container>
 </template>
+
 <script>
 export default {
   name: "Cards",
@@ -68,11 +72,35 @@ export default {
       },
       {
         id: 4,
-        nombre: "Audivisual",
+        nombre: "Audiovisual",
         subtitulo: "Cursos de audivisual",
         descripcion:
           "El concepto audiovisual significa la integración e interrelación plena entre lo auditivo y lo visual para producir una nueva realidad o lenguaje. La percepción es simultánea. Se crean así nuevas realidades sentidos|sensoriales mediante mecanismos como la armonía, complementaria, refuerzo y contraste.",
-        url: "/img/audi.jpg",
+        url: "/img/AUDIOVISUAL.jpg",
+      },
+      {
+        id: 5,
+        nombre: "Coaching y aprendizaje",
+        subtitulo: "Cursos de Coaching y aprendizaje",
+        descripcion:
+          "El concepto audiovisual significa la integración e interrelación plena entre lo auditivo y lo visual para producir una nueva realidad o lenguaje. La percepción es simultánea. Se crean así nuevas realidades sentidos|sensoriales mediante mecanismos como la armonía, complementaria, refuerzo y contraste.",
+        url: "/img/coaching.jpg",
+      },
+      {
+        id: 6,
+        nombre: "Fotografia",
+        subtitulo: "Cursos de Fotografia",
+        descripcion:
+          "El concepto audiovisual significa la integración e interrelación plena entre lo auditivo y lo visual para producir una nueva realidad o lenguaje. La percepción es simultánea. Se crean así nuevas realidades sentidos|sensoriales mediante mecanismos como la armonía, complementaria, refuerzo y contraste.",
+        url: "/img/FOTOGRAFIA.jpg",
+      },
+      {
+        id: 7,
+        nombre: "Marketing y publicidad",
+        subtitulo: "Cursos de Marketing y publicida",
+        descripcion:
+          "El concepto audiovisual significa la integración e interrelación plena entre lo auditivo y lo visual para producir una nueva realidad o lenguaje. La percepción es simultánea. Se crean así nuevas realidades sentidos|sensoriales mediante mecanismos como la armonía, complementaria, refuerzo y contraste.",
+        url: "/img/MARKETING-Y-PUBLICIDAD.jpg",
       },
     ],
   }),

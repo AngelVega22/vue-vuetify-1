@@ -20,14 +20,16 @@ const routes = [
   },
   {
     path: '/cursos',
-    name: 'cursos',
+    name: 'Cursos',
+
 
     component: () => import('../views/Cursos.vue')
   },
   ,
   {
     path: '/contacto',
-    name: 'contacto',
+    name: 'Contacto',
+
 
     component: () => import('../views/Contact.vue')
   },

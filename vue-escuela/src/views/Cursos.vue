@@ -17,6 +17,7 @@
         </h1></v-flex
       ></v-layout
     >
+
     <v-layout justify-center align-center mb-5>
       <v-flex class="h4" mb-5 mt-5>
         <input
@@ -41,7 +42,7 @@
         md4
         lg3
       >
-        <v-card class="mt-5" max-width="344">
+        <v-card class="mx-auto mt-5" max-width="360">
           <v-img :src="categoria.url" height="200px"></v-img>
 
           <v-card-title> {{ categoria.nombre }} </v-card-title>
@@ -52,7 +53,7 @@
         </v-card>
       </v-flex>
     </v-layout>
-    <v-container style="height: 70vh"></v-container>
+    <v-container style="height: 65vh"></v-container>
   </v-container>
 </template>
 <script>
@@ -87,7 +88,35 @@ export default {
         nombre: "Taller instagram",
         subtitulo: "taller de instagram",
         descripcion: "",
-        url: "/img/audi.jpg",
+        url: "/img/disgr.jpg",
+      },
+      {
+        id: 5,
+        nombre: "Curso personal branding",
+        subtitulo: "curso de personal branding",
+        descripcion: "",
+        url: "/img/disgr.jpg",
+      },
+      {
+        id: 6,
+        nombre: "Curso Photoshop intermedio",
+        subtitulo: "curso de photoshop intermedio",
+        descripcion: "",
+        url: "/img/disgr.jpg",
+      },
+      {
+        id: 7,
+        nombre: "Curso Photoshop avanzado",
+        subtitulo: "curso de photoshop avanzado",
+        descripcion: "",
+        url: "/img/disgr.jpg",
+      },
+      {
+        id: 8,
+        nombre: "Curso Illustrato intermedio",
+        subtitulo: "curso de illustrato intermedio",
+        descripcion: "",
+        url: "/img/disgr.jpg",
       },
     ],
     search: "",

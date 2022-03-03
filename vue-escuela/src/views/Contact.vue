@@ -1,48 +1,62 @@
 <template>
-  <v-layout style="height: 90vh" align-center justify-center>
-    <v-flex xs12 lg4>
-      <form>
-        <h1>Contactános</h1>
-        <v-text-field
-          v-model="name"
-          :error-messages="nameErrors"
-          :counter="10"
-          label="Nombre"
-          required
-          @input="$v.name.$touch()"
-          @blur="$v.name.$touch()"
-        ></v-text-field>
-        <v-text-field
-          v-model="email"
-          :error-messages="emailErrors"
-          label="E-mail"
-          required
-          @input="$v.email.$touch()"
-          @blur="$v.email.$touch()"
-        ></v-text-field>
-        <v-select
-          v-model="select"
-          :items="items"
-          :error-messages="selectErrors"
-          label="¿Que te interesa más?"
-          required
-          @change="$v.select.$touch()"
-          @blur="$v.select.$touch()"
-        ></v-select>
-        <v-checkbox
-          v-model="checkbox"
-          :error-messages="checkboxErrors"
-          label="Aceptar términos y condiciones"
-          required
-          @change="$v.checkbox.$touch()"
-          @blur="$v.checkbox.$touch()"
-        ></v-checkbox>
+  <v-container>
+    <v-layout align-center justify-center wrap>
+      <v-flex xs12 lg6>
+        <v-container pa-5>
+          <form>
+            <h1>Contactános</h1>
+            <v-text-field
+              v-model="name"
+              :error-messages="nameErrors"
+              :counter="20"
+              label="Nombre"
+              required
+              @input="$v.name.$touch()"
+              @blur="$v.name.$touch()"
+            ></v-text-field>
+            <v-text-field
+              v-model="email"
+              :error-messages="emailErrors"
+              label="E-mail"
+              required
+              @input="$v.email.$touch()"
+              @blur="$v.email.$touch()"
+            ></v-text-field>
+            <v-select
+              v-model="select"
+              :items="items"
+              :error-messages="selectErrors"
+              label="¿Que te interesa más?"
+              required
+              @change="$v.select.$touch()"
+              @blur="$v.select.$touch()"
+            ></v-select>
+            <v-checkbox
+              v-model="checkbox"
+              :error-messages="checkboxErrors"
+              label="Aceptar términos y condiciones"
+              required
+              @change="$v.checkbox.$touch()"
+              @blur="$v.checkbox.$touch()"
+            ></v-checkbox>
 
-        <v-btn class="mr-4" @click="submit"> Enviar </v-btn>
-        <v-btn @click="clear"> borrar </v-btn>
-      </form>
-    </v-flex>
-  </v-layout>
+            <v-btn class="mr-4" @click="submit"> Enviar </v-btn>
+            <v-btn @click="clear"> borrar </v-btn>
+          </form>
+        </v-container>
+      </v-flex>
+      <v-flex xs12 lg6>
+        <v-container pa-5>
+          <v-container pa-5>
+            <v-parallax
+              src="https://images.pexels.com/photos/699459/pexels-photo-699459.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            ></v-parallax>
+          </v-container>
+        </v-container>
+      </v-flex>
+    </v-layout>
+    <v-container style="height: 35vh"> </v-container>
+  </v-container>
 </template>
 <script>
 import { validationMixin } from "vuelidate";
@@ -66,7 +80,15 @@ export default {
     name: "",
     email: "",
     select: null,
-    items: ["Marketing", "Diseño", "Audiovisual", "Programación"],
+    items: [
+      "Marketing digital",
+      "Diseño gráfico",
+      "Audiovisual",
+      "Web y Seo",
+      "Coaching y aprendizaje",
+      "Fotografía",
+      "Marketing y publicidad",
+    ],
     checkbox: false,
   }),
 
