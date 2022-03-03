@@ -23,17 +23,31 @@
         sm6
         md4
         lg3
+        pa-5
         :key="categoria.id"
       >
-        <v-card class="mx-auto mt-5" max-width="360">
-          <v-img :src="categoria.url" height="200px"></v-img>
+        <v-hover v-slot="{ hover }" open-delay="200">
+          <v-card
+            class="mx-auto mt-5"
+            max-width="360"
+            :elevation="hover ? 16 : 2"
+            :class="{ 'on-hover': hover }"
+          >
+            <v-img :src="categoria.url" height="200px"></v-img>
 
-          <v-card-title> {{ categoria.nombre }} </v-card-title>
+            <v-card-title> {{ categoria.nombre }} </v-card-title>
 
-          <v-card-subtitle> {{ categoria.subtitulo }}</v-card-subtitle>
+            <v-card-subtitle> {{ categoria.subtitulo }}</v-card-subtitle>
 
-          <v-card-actions> </v-card-actions>
-        </v-card>
+            <v-card-actions>
+              <div class="my-2 ml-2">
+                <v-btn x-small color="yapaycolor" href="/cursos" dark>
+                  ver más
+                </v-btn>
+              </div>
+            </v-card-actions>
+          </v-card>
+        </v-hover>
       </v-flex>
     </v-layout>
     <v-container style="height: 10vh"> </v-container>
@@ -104,5 +118,16 @@ export default {
       },
     ],
   }),
+
+  watch: {
+    loader() {
+      const l = this.loader;
+      this[l] = !this[l];
+
+      setTimeout(() => (this[l] = false), 3000);
+
+      this.loader = null;
+    },
+  },
 };
 </script>

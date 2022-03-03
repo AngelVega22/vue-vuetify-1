@@ -48,9 +48,37 @@
       <v-flex xs12 lg6>
         <v-container pa-5>
           <v-container pa-5>
-            <v-parallax
-              src="https://images.pexels.com/photos/699459/pexels-photo-699459.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-            ></v-parallax>
+            <template>
+              <v-row>
+                <v-col
+                  v-for="n in 9"
+                  :key="n"
+                  class="d-flex child-flex"
+                  cols="4"
+                >
+                  <v-img
+                    :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
+                    :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
+                    aspect-ratio="1"
+                    class="grey lighten-2"
+                  >
+                    <template v-slot:placeholder>
+                      <v-row
+                        class="fill-height ma-0"
+                        align="center"
+                        justify="center"
+                      >
+                        <v-progress-circular
+                          indeterminate
+                          color="grey lighten-5"
+                        ></v-progress-circular>
+                      </v-row>
+                    </template>
+                  </v-img>
+                </v-col>
+              </v-row> </template></v-container></v-container></v-flex></v-layout
+  ></v-container>
+</template>
           </v-container>
         </v-container>
       </v-flex>
