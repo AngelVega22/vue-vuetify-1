@@ -64,6 +64,11 @@
         pa-5
       >
         <v-card class="mx-auto" outlined>
+          <v-img
+            :src="categoria.url"
+            max-width="90vw"
+            max-height="35vh"
+          ></v-img>
           <v-list-item three-line>
             <v-list-item-content>
               <div class="text-overline mb-4">{{ categoria.nombre }}</div>
@@ -74,19 +79,29 @@
                 {{ categoria.descripcion }}
               </v-list-item-subtitle>
               <v-card-actions>
-                <v-btn dark color="yapaycolor " rounded href="/contacto">
-                  Inscribete
-                </v-btn>
-
                 <v-col cols="auto">
                   <v-dialog
                     transition="dialog-bottom-transition"
-                    max-width="600"
+                    max-width="800"
                   >
                     <template v-slot:activator="{ on, attrs }">
-                      <v-btn outlined rounded text v-bind="attrs" v-on="on"
+                      <v-btn
+                        class="mb-2"
+                        outlined
+                        rounded
+                        text
+                        v-bind="attrs"
+                        v-on="on"
                         >más información</v-btn
                       >
+                      <v-btn
+                        dark
+                        color="yapaycolor mb-2 "
+                        rounded
+                        href="/contacto"
+                      >
+                        Inscribete
+                      </v-btn>
                     </template>
                     <template v-slot:default="dialog">
                       <v-card>
@@ -109,7 +124,6 @@
                 </v-col>
               </v-card-actions>
             </v-list-item-content>
-            <v-img :src="categoria.url" max-width="30vw" height="200px"></v-img>
           </v-list-item>
         </v-card>
 
