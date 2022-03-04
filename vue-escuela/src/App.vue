@@ -6,7 +6,7 @@
 </style>
 <template>
   <v-app>
-    <v-app-bar prominent>
+    <v-app-bar class="yapaycolor hidden-sm-and-down" prominent>
       <div>
         <v-container>
           <a href="/">
@@ -20,39 +20,67 @@
       </div>
 
       <template v-slot:extension>
-        <v-tabs class="yapaycolor">
+        <v-tabs class="yapaycolor hidden-sm-and-down">
           <v-container>
-            <!-- <v-btn text large href="/"
-              ><p class="white--text">Escuela</p>
-            </v-btn> -->
-            <router-link class="white--text text-decoration-none pa-5" to="/"
+            <router-link
+              class="hidden-sm-and-down white--text text-decoration-none pa-5"
+              to="/"
               >Escuela</router-link
             >
 
             <router-link
-              class="white--text text-decoration-none pa-5"
+              class="hidden-sm-and-down white--text text-decoration-none pa-5"
               to="/cursos"
               >cursos</router-link
             >
-            <!-- <v-btn text large href="/cursos">
-              <p class="white--text">Cursos</p>
-            </v-btn> -->
+
             <router-link
-              class="white--text text-decoration-none pa-5"
+              class="hidden-sm-and-down white--text text-decoration-none pa-5"
               to="/contacto"
               >Contacto</router-link
             >
-
-            <!-- <v-btn text large href="/contacto">
-              <p class="white--text">Contacto</p>
-            </v-btn> -->
-            <!-- <v-btn text large href="https://yapaydigital.pe/">
-              <p class="white--text">Agencia</p>
-            </v-btn> -->
           </v-container>
         </v-tabs>
       </template>
     </v-app-bar>
+    <!--====================-->
+    <v-toolbar class="hidden-sm-and-up yapaycolor" app>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+    </v-toolbar>
+    <v-navigation-drawer v-model="drawer" absolute temporary>
+      <v-list-item>
+        <v-img src="/img/escuela.png" max-width="220px"></v-img>
+
+        <v-list-item-content>
+          <!-- <v-list-item-title>John Leider</v-list-item-title> -->
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-card class="mx-auto">
+        <v-list class="grow">
+          <v-list-item>
+            <v-list-item-action> </v-list-item-action>
+
+            <v-list-item-content>
+              <router-link class="black--text text-decoration-none pa-5" to="/">
+                Escuela</router-link
+              >
+              <router-link
+                class="black--text text-decoration-none pa-5"
+                to="/cursos"
+                >Cursos</router-link
+              >
+              <router-link
+                class="black--text text-decoration-none pa-5"
+                to="/contacto"
+                >Contacto</router-link
+              >
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-card>
+    </v-navigation-drawer>
+    <!--=====================-->
 
     <v-main>
       <router-view />
@@ -89,7 +117,14 @@ export default {
   name: "App",
 
   data: () => ({
-    //
+    drawer: false,
+    group: null,
   }),
+
+  watch: {
+    group() {
+      this.drawer = false;
+    },
+  },
 };
 </script>

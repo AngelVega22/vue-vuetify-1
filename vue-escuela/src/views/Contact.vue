@@ -1,7 +1,11 @@
+<style>
+</style>
 <template>
   <v-container>
+    <v-container style="height: 2vh"> </v-container>
+
     <v-layout align-center justify-center wrap>
-      <v-flex xs12 lg6>
+      <v-flex xs12 lg5 rounded-lg pa-5>
         <v-container pa-5>
           <form>
             <h1>Contactános</h1>
@@ -41,49 +45,33 @@
             ></v-checkbox>
 
             <v-btn class="mr-4" @click="submit"> Enviar </v-btn>
-            <v-btn @click="clear"> borrar </v-btn>
+            <!-- <v-btn @click="clear"> borrar </v-btn> -->
           </form>
         </v-container>
       </v-flex>
-      <v-flex xs12 lg6>
-        <v-container pa-5>
-          <v-container pa-5>
-            <template>
-              <v-row>
-                <v-col
-                  v-for="n in 9"
-                  :key="n"
-                  class="d-flex child-flex"
-                  cols="4"
-                >
-                  <v-img
-                    :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
-                    :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
-                    aspect-ratio="1"
-                    class="grey lighten-2"
-                  >
-                    <template v-slot:placeholder>
-                      <v-row
-                        class="fill-height ma-0"
-                        align="center"
-                        justify="center"
-                      >
-                        <v-progress-circular
-                          indeterminate
-                          color="grey lighten-5"
-                        ></v-progress-circular>
-                      </v-row>
-                    </template>
-                  </v-img>
-                </v-col>
-              </v-row> </template></v-container></v-container></v-flex></v-layout
-  ></v-container>
-</template>
-          </v-container>
-        </v-container>
+      <v-flex xs12 lg6 pa-5>
+        <v-row>
+          <v-col v-for="n in 9" :key="n" class="d-flex child-flex" cols="4">
+            <v-img
+              :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
+              :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
+              aspect-ratio="1"
+              class="grey lighten-2"
+            >
+              <template v-slot:placeholder>
+                <v-row class="fill-height ma-0" align="center" justify="center">
+                  <v-progress-circular
+                    indeterminate
+                    color="grey lighten-5"
+                  ></v-progress-circular>
+                </v-row>
+              </template>
+            </v-img>
+          </v-col>
+        </v-row>
       </v-flex>
     </v-layout>
-    <v-container style="height: 35vh"> </v-container>
+    <v-container style="height: 8vh"> </v-container>
   </v-container>
 </template>
 <script>
@@ -154,13 +142,13 @@ export default {
     submit() {
       this.$v.$touch();
     },
-    clear() {
-      this.$v.$reset();
-      this.name = "";
-      this.email = "";
-      this.select = null;
-      this.checkbox = false;
-    },
+    // clear() {
+    //   this.$v.$reset();
+    //   this.name = "";
+    //   this.email = "";
+    //   this.select = null;
+    //   this.checkbox = false;
+    // },
   },
 };
 </script>
