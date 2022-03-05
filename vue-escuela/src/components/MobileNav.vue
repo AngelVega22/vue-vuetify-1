@@ -13,14 +13,11 @@
     <v-navigation-drawer v-model="drawer" absolute temporary>
       <v-list-item>
         <a href="/"><v-img src="/img/escuela.png" max-width="220px"></v-img></a>
-
-        <v-list-item-content>
-          <!-- <v-list-item-title>John Leider</v-list-item-title> -->
-        </v-list-item-content>
       </v-list-item>
+      <v-divider></v-divider>
 
       <!-- <v-card class="mx-auto"> -->
-      <v-list class="grow">
+      <v-list dense>
         <v-list-item>
           <v-list-item-content>
             <v-btn text>
@@ -52,6 +49,7 @@
             >
           </v-list-item-content>
         </v-list-item>
+        <v-divider></v-divider>
       </v-list>
     </v-navigation-drawer>
   </section>

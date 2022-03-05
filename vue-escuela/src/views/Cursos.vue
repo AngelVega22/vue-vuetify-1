@@ -17,13 +17,6 @@
       <v-flex class="text-h6 pa-1" xs12 sm6 md6 lg4>
         <p class="text-center">
           <v-btn icon> </v-btn>
-          <!-- <input
-            class="outlined"
-            type="text"
-            v-model="search"
-            placeholder="Buscar cursos"
-            dark
-          /> -->
           <v-container>
             <v-text-field
               type="text"
@@ -58,14 +51,14 @@
         mb-1
         :key="categoria.id"
         xs12
-        sm8
-        md8
+        sm10
+        md10
         lg8
         pa-1
       >
         <v-card class="mx-auto" outlined>
           <v-img
-            class="hidden-sm-and-up"
+            class="hidden-md-and-up"
             :src="categoria.url"
             max-width="100vw"
             max-height="35vh"
@@ -164,7 +157,14 @@
               :src="categoria.url"
               max-width="30vw"
               max-height="25vh"
-            ></v-img>
+            >
+              <template v-slot:placeholder>
+                <v-skeleton-loader
+                  class="mx-auto"
+                  type="card"
+                ></v-skeleton-loader>
+              </template>
+            </v-img>
           </v-list-item>
         </v-card>
 
@@ -181,6 +181,7 @@
         <!---->
       </v-flex>
     </v-layout>
+
     <v-container style="height: 65vh"></v-container>
   </div>
 </template>
@@ -201,14 +202,14 @@ export default {
         subtitulo: "curso de community Manager",
         descripcion:
           "curso de community Manager curso de community Manager curso de community Manager​​ curso de community Manager​​ curso de community Manager curso de community Manager​​curso de community Manager curso de community Manager​​curso de community Manager curso de community Manager​​curso de community Manager curso de community Manager​​",
-        url: "img/cursos/CURSO-FACEBOOK-Y-WHATSAPP.jpg",
+        url: "img/cursos/TALLER-INSTAGRAM.jpg",
       },
       {
         id: 2,
         nombre: "Branding",
         subtitulo: "curso de branding",
         descripcion: "",
-        url: "/img/dweb.jpg",
+        url: "img/cursos/TALLER-INSTAGRAM.jpg",
       },
       {
         id: 3,
@@ -229,56 +230,21 @@ export default {
         nombre: "Curso personal branding",
         subtitulo: "curso de personal branding",
         descripcion: "",
-        url: "/img/disgr.jpg",
+        url: "img/cursos/CURSO-FACEBOOK-Y-WHATSAPP.jpg",
       },
       {
         id: 6,
         nombre: "Curso Photoshop intermedio",
         subtitulo: "curso de photoshop intermedio",
         descripcion: "",
-        url: "/img/disgr.jpg",
+        url: "img/cursos/CURSO-FACEBOOK-Y-WHATSAPP.jpg",
       },
       {
         id: 7,
         nombre: "Curso Photoshop avanzado",
         subtitulo: "curso de photoshop avanzado",
         descripcion: "",
-        url: "/img/disgr.jpg",
-      },
-      {
-        id: 8,
-        nombre: "Curso Illustrato intermedio",
-        subtitulo: "curso de illustrato intermedio",
-        descripcion: "",
-        url: "/img/disgr.jpg",
-      },
-      {
-        id: 9,
-        nombre: "Curso Illustrato intermedio",
-        subtitulo: "curso de illustrato intermedio",
-        descripcion: "",
-        url: "/img/disgr.jpg",
-      },
-      {
-        id: 10,
-        nombre: "Curso Illustrato intermedio",
-        subtitulo: "curso de illustrato intermedio",
-        descripcion: "",
-        url: "/img/disgr.jpg",
-      },
-      {
-        id: 11,
-        nombre: "Curso Illustrato intermedio",
-        subtitulo: "curso de illustrato intermedio",
-        descripcion: "",
-        url: "/img/disgr.jpg",
-      },
-      {
-        id: 12,
-        nombre: "Curso Illustrato intermedio",
-        subtitulo: "curso de illustrato intermedio",
-        descripcion: "",
-        url: "/img/disgr.jpg",
+        url: "img/cursos/CURSO-FACEBOOK-Y-WHATSAPP.jpg",
       },
     ],
     search: "",

@@ -8,7 +8,7 @@
       <v-flex xs12 lg5 rounded-lg pa-5>
         <v-container pa-5>
           <form>
-            <h1>Contactános</h1>
+            <h1>Escríbenos</h1>
             <v-text-field
               v-model="name"
               :error-messages="nameErrors"
