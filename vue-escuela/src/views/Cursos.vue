@@ -4,7 +4,7 @@
 <template>
   <div>
     <v-layout justify-center>
-      <v-flex class="display-1 pa-5 mb-5 mt-5" yapaycolor--text xs12>
+      <v-flex class="display-1 pa-2 mt-5" yapaycolor--text xs12>
         <h1
           class="text-center font-weight-thin"
           style="font-family: 'Leckerli One', cursive"
@@ -13,8 +13,8 @@
         </h1></v-flex
       ></v-layout
     >
-    <v-layout justify-center align-center mt-5>
-      <v-flex class="text-h6 pa-1" xs12>
+    <v-layout justify-center align-center>
+      <v-flex class="text-h6 pa-1" xs12 sm6 md6 lg4>
         <p class="text-center">
           <v-btn icon> </v-btn>
           <!-- <input
@@ -24,7 +24,7 @@
             placeholder="Buscar cursos"
             dark
           /> -->
-          <v-container style="width: 40vh">
+          <v-container>
             <v-text-field
               type="text"
               v-model="search"
@@ -61,12 +61,13 @@
         sm8
         md8
         lg8
-        pa-5
+        pa-1
       >
         <v-card class="mx-auto" outlined>
           <v-img
+            class="hidden-sm-and-up"
             :src="categoria.url"
-            max-width="90vw"
+            max-width="100vw"
             max-height="35vh"
           ></v-img>
           <v-list-item three-line>
@@ -78,12 +79,10 @@
               <v-list-item-subtitle>
                 {{ categoria.descripcion }}
               </v-list-item-subtitle>
+
               <v-card-actions>
                 <v-col cols="auto">
-                  <v-dialog
-                    transition="dialog-bottom-transition"
-                    max-width="800"
-                  >
+                  <v-dialog fullscreen transition="dialog-bottom-transition">
                     <template v-slot:activator="{ on, attrs }">
                       <v-btn
                         class="mb-2"
@@ -100,30 +99,72 @@
                         rounded
                         href="/contacto"
                       >
-                        Inscribete
+                        Inscríbete
                       </v-btn>
                     </template>
                     <template v-slot:default="dialog">
+                      <Navbar />
+                      <MobileNav />
                       <v-card>
-                        <v-toolbar color="primary" dark
-                          >Opening from the bottom</v-toolbar
+                        <v-toolbar color="grey darken-2" dark>
+                          <v-btn
+                            class="pa-2"
+                            outlined
+                            rounded
+                            @click="dialog.value = false"
+                          >
+                            <v-icon> mdi-arrow-left </v-icon>Regresar</v-btn
+                          ></v-toolbar
                         >
                         <v-card-text>
-                          <div class="text-h6 pa-12">
-                            {{ categoria.nombre }}
-                          </div>
+                          <div class="text-h3 pa-5"></div>
+                          <v-layout wrap>
+                            <v-flex xs12 lg6>
+                              <v-img :src="categoria.url"></v-img>
+                            </v-flex>
+                            <v-flex xs12 lg6>
+                              <div class="text-h4 px-5">
+                                {{ categoria.nombre }}
+                              </div>
+                              <v-container pa-5>
+                                <div>
+                                  {{ categoria.descripcion }}
+                                </div>
+                              </v-container>
+                              <Form />
+                            </v-flex>
+                          </v-layout>
+                          <!-- <div class="text-h6 pa-5">
+                            {{ categoria.descripcion }}
+                          </div> -->
                         </v-card-text>
-                        <v-card-actions class="justify-end">
-                          <v-btn text @click="dialog.value = false"
-                            >Close</v-btn
+
+                        <v-card-actions class="justify-center">
+                          <v-btn
+                            dark
+                            color="yapaycolor  "
+                            rounded
+                            href="/contacto"
+                          >
+                            Inscríbete
+                          </v-btn>
+                          <v-btn outlined rounded @click="dialog.value = false"
+                            >Más cursos</v-btn
                           >
                         </v-card-actions>
                       </v-card>
+                      <Footer />
                     </template>
                   </v-dialog>
                 </v-col>
               </v-card-actions>
             </v-list-item-content>
+            <v-img
+              class="hidden-sm-and-down"
+              :src="categoria.url"
+              max-width="30vw"
+              max-height="25vh"
+            ></v-img>
           </v-list-item>
         </v-card>
 
@@ -136,14 +177,21 @@
 
           <v-card-actions> </v-card-actions>
         </v-card> -->
+
+        <!---->
       </v-flex>
     </v-layout>
     <v-container style="height: 65vh"></v-container>
   </div>
 </template>
 <script>
+import Navbar from "../components/Navbar.vue";
+import MobileNav from "../components/MobileNav.vue";
+import Footer from "../components/Footer.vue";
+import Form from "../components/Form.vue";
 export default {
   name: "Cursos",
+
   data: () => ({
     show: false,
     categorias: [
@@ -153,7 +201,7 @@ export default {
         subtitulo: "curso de community Manager",
         descripcion:
           "curso de community Manager curso de community Manager curso de community Manager​​ curso de community Manager​​ curso de community Manager curso de community Manager​​curso de community Manager curso de community Manager​​curso de community Manager curso de community Manager​​curso de community Manager curso de community Manager​​",
-        url: " /img/mktdig.jpg",
+        url: "img/cursos/CURSO-FACEBOOK-Y-WHATSAPP.jpg",
       },
       {
         id: 2,
@@ -167,14 +215,14 @@ export default {
         nombre: "Facebook y whatsApp",
         subtitulo: "curso de facebook y whatsapp",
         descripcion: "",
-        url: "/img/disgr.jpg",
+        url: "img/cursos/CURSO-FACEBOOK-Y-WHATSAPP.jpg",
       },
       {
         id: 4,
         nombre: "Taller instagram",
         subtitulo: "taller de instagram",
         descripcion: "",
-        url: "/img/disgr.jpg",
+        url: "img/cursos/TALLER-INSTAGRAM.jpg",
       },
       {
         id: 5,
@@ -205,28 +253,28 @@ export default {
         url: "/img/disgr.jpg",
       },
       {
-        id: 8,
+        id: 9,
         nombre: "Curso Illustrato intermedio",
         subtitulo: "curso de illustrato intermedio",
         descripcion: "",
         url: "/img/disgr.jpg",
       },
       {
-        id: 8,
+        id: 10,
         nombre: "Curso Illustrato intermedio",
         subtitulo: "curso de illustrato intermedio",
         descripcion: "",
         url: "/img/disgr.jpg",
       },
       {
-        id: 8,
+        id: 11,
         nombre: "Curso Illustrato intermedio",
         subtitulo: "curso de illustrato intermedio",
         descripcion: "",
         url: "/img/disgr.jpg",
       },
       {
-        id: 8,
+        id: 12,
         nombre: "Curso Illustrato intermedio",
         subtitulo: "curso de illustrato intermedio",
         descripcion: "",
@@ -241,6 +289,12 @@ export default {
         return categoria.subtitulo.match(this.search);
       });
     },
+  },
+  components: {
+    Form,
+    Navbar,
+    MobileNav,
+    Footer,
   },
 };
 </script>
