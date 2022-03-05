@@ -51,7 +51,7 @@
       </v-flex>
       <v-flex xs12 lg6 pa-5>
         <v-layout wrap>
-          <v-flex v-for="staff in staffs" :key="staff.id" xs6 lg3>
+          <v-flex v-for="staff in staffs" :key="staff.id" xs6 sm4 md3 lg3>
             <v-img class="fill-height" :src="staff.foto"></v-img>
           </v-flex>
         </v-layout>
