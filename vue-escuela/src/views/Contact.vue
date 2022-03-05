@@ -50,25 +50,11 @@
         </v-container>
       </v-flex>
       <v-flex xs12 lg6 pa-5>
-        <v-row>
-          <v-col v-for="n in 9" :key="n" class="d-flex child-flex" cols="4">
-            <v-img
-              :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
-              :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
-              aspect-ratio="1"
-              class="grey lighten-2"
-            >
-              <template v-slot:placeholder>
-                <v-row class="fill-height ma-0" align="center" justify="center">
-                  <v-progress-circular
-                    indeterminate
-                    color="grey lighten-5"
-                  ></v-progress-circular>
-                </v-row>
-              </template>
-            </v-img>
-          </v-col>
-        </v-row>
+        <v-layout wrap>
+          <v-flex v-for="staff in staffs" :key="staff.id" xs6 lg3>
+            <v-img class="fill-height" :src="staff.foto"></v-img>
+          </v-flex>
+        </v-layout>
       </v-flex>
     </v-layout>
     <v-container style="height: 8vh"> </v-container>
@@ -93,6 +79,56 @@ export default {
   },
 
   data: () => ({
+    staffs: [
+      {
+        id: 1,
+        foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-31-1-300x300.jpg",
+      },
+      {
+        id: 2,
+        foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-2-300x300.jpg",
+      },
+      {
+        id: 3,
+        foto: "https://yapaydigital.pe/wp-content/uploads/2021/09/Danteazul-300x300.jpg",
+      },
+      {
+        id: 4,
+        foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-32-1.jpg",
+      },
+      {
+        id: 5,
+        foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-30-1-300x300.jpg",
+      },
+      {
+        id: 6,
+        foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-29-1-300x300.jpg",
+      },
+      {
+        id: 7,
+        foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-25-1-300x300.jpg",
+      },
+      {
+        id: 8,
+        foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-24-1-300x300.jpg",
+      },
+      {
+        id: 9,
+        foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-23-1-300x300.jpg",
+      },
+      {
+        id: 10,
+        foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-27-1-300x300.jpg",
+      },
+      {
+        id: 11,
+        foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-1-300x300.jpg",
+      },
+      {
+        id: 12,
+        foto: "https://yapaydigital.pe/wp-content/uploads/2021/11/PerfilYapay-12-de-12-235x300.jpg",
+      },
+    ],
     name: "",
     email: "",
     select: null,

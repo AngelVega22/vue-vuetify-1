@@ -155,8 +155,10 @@
             <v-img
               class="hidden-sm-and-down"
               :src="categoria.url"
+              :lazy-src="categoria.url"
               max-width="30vw"
               max-height="25vh"
+              aspect-ratio="1"
             >
               <template v-slot:placeholder>
                 <v-skeleton-loader
@@ -182,7 +184,30 @@
       </v-flex>
     </v-layout>
 
-    <v-container style="height: 65vh"></v-container>
+    <v-container style="height: 65vh">
+      <!-- <v-layout justify-center align-center wrap>
+        <v-flex
+          v-for="categoria in filteredCourses"
+          mb-1
+          :key="categoria.id"
+          xs12
+          sm3
+          md3
+          lg3
+          pa-1
+        >
+          <v-card class="mx-auto mt-5">
+            <v-img :src="categoria.url" height="200px"></v-img>
+
+            <v-card-title> {{ categoria.nombre }} </v-card-title>
+
+            <v-card-subtitle> {{ categoria.subtitulo }}</v-card-subtitle>
+
+            <v-card-actions> </v-card-actions>
+          </v-card>
+        </v-flex>
+      </v-layout> -->
+    </v-container>
   </div>
 </template>
 <script>
@@ -198,53 +223,17 @@ export default {
     categorias: [
       {
         id: 1,
-        nombre: "Community Manager",
-        subtitulo: "curso de community Manager",
-        descripcion:
-          "curso de community Manager curso de community Manager curso de community Manager​​ curso de community Manager​​ curso de community Manager curso de community Manager​​curso de community Manager curso de community Manager​​curso de community Manager curso de community Manager​​curso de community Manager curso de community Manager​​",
-        url: "img/cursos/TALLER-INSTAGRAM.jpg",
-      },
-      {
-        id: 2,
-        nombre: "Branding",
-        subtitulo: "curso de branding",
-        descripcion: "",
-        url: "img/cursos/TALLER-INSTAGRAM.jpg",
-      },
-      {
-        id: 3,
         nombre: "Facebook y whatsApp",
         subtitulo: "curso de facebook y whatsapp",
         descripcion: "",
         url: "img/cursos/CURSO-FACEBOOK-Y-WHATSAPP.jpg",
       },
       {
-        id: 4,
+        id: 2,
         nombre: "Taller instagram",
         subtitulo: "taller de instagram",
         descripcion: "",
         url: "img/cursos/TALLER-INSTAGRAM.jpg",
-      },
-      {
-        id: 5,
-        nombre: "Curso personal branding",
-        subtitulo: "curso de personal branding",
-        descripcion: "",
-        url: "img/cursos/CURSO-FACEBOOK-Y-WHATSAPP.jpg",
-      },
-      {
-        id: 6,
-        nombre: "Curso Photoshop intermedio",
-        subtitulo: "curso de photoshop intermedio",
-        descripcion: "",
-        url: "img/cursos/CURSO-FACEBOOK-Y-WHATSAPP.jpg",
-      },
-      {
-        id: 7,
-        nombre: "Curso Photoshop avanzado",
-        subtitulo: "curso de photoshop avanzado",
-        descripcion: "",
-        url: "img/cursos/CURSO-FACEBOOK-Y-WHATSAPP.jpg",
       },
     ],
     search: "",
