@@ -56,7 +56,12 @@
             <v-card-actions>
               <div class="my-2 ml-2">
                 <v-btn x-small color="yapaycolor" href="/cursos" dark>
-                  ver más
+                  <router-link
+                    class="white--text text-decoration-none pa-5"
+                    to="/cursos"
+                  >
+                    ver más</router-link
+                  >
                 </v-btn>
               </div>
             </v-card-actions>

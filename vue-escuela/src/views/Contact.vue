@@ -64,7 +64,7 @@
           </v-flex> -->
 
           <!--=========================================================-->
-          <v-flex v-for="staff in staffs" :key="staff.id" xs6 sm4 md3 lg3>
+          <v-flex v-for="staff in staffs" :key="staff.id" xs6 sm4 md3 lg4 xl3>
             <v-hover v-slot="{ hover }">
               <v-card class="mx-auto fill-height" color="grey lighten-4">
                 <v-img :aspect-ratio="9 / 9" :src="staff.foto">
@@ -75,7 +75,6 @@
                         d-flex
                         transition-fast-in-fast-out
                         yapaycolor
-                        darken-2
                         pa-1
                         v-card--reveal
                         white--text
