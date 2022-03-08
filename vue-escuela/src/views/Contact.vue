@@ -1,4 +1,12 @@
 <style>
+.v-card--reveal {
+  align-items: center;
+  bottom: 0;
+  justify-content: center;
+  opacity: 0.8;
+  position: absolute;
+  width: 100%;
+}
 </style>
 <template>
   <v-container>
@@ -51,9 +59,66 @@
       </v-flex>
       <v-flex xs12 lg6 pa-5>
         <v-layout wrap>
-          <v-flex v-for="staff in staffs" :key="staff.id" xs6 sm4 md3 lg3>
+          <!-- <v-flex v-for="staff in staffs" :key="staff.id" xs6 sm4 md3 lg3>
             <v-img class="fill-height" :src="staff.foto"></v-img>
+          </v-flex> -->
+
+          <!--=========================================================-->
+          <v-flex v-for="staff in staffs" :key="staff.id" xs6 sm4 md3 lg3>
+            <v-hover v-slot="{ hover }">
+              <v-card class="mx-auto fill-height" color="grey lighten-4">
+                <v-img :aspect-ratio="9 / 9" :src="staff.foto">
+                  <v-expand-transition>
+                    <div
+                      v-if="hover"
+                      class="
+                        d-flex
+                        transition-fast-in-fast-out
+                        yapaycolor
+                        darken-2
+                        pa-1
+                        v-card--reveal
+                        white--text
+                      "
+                      style="height: 30%"
+                    >
+                      {{ staff.cargo }}
+                    </div>
+                  </v-expand-transition>
+                </v-img>
+                <v-card-text style="position: relative">
+                  <div class="font-weight-light text-center yapaycolor--text">
+                    {{ staff.nombre }}
+                  </div>
+                </v-card-text>
+                <!-- <v-card-text class="pt-6" style="position: relative">
+                  <v-btn
+                    absolute
+                    color="orange"
+                    class="white--text"
+                    fab
+                    large
+                    right
+                    top
+                  >
+                    <v-icon>mdi-cart</v-icon>
+                  </v-btn>
+                  <div class="font-weight-light grey--text text-h6 mb-2">
+                    For the perfect meal
+                  </div>
+                  <h3 class="text-h4 font-weight-light orange--text mb-2">
+                    QW cooking utensils
+                  </h3>
+                  <div class="font-weight-light text-h6 mb-2">
+                    Our Vintage kitchen utensils delight any chef.<br />
+                    Made of bamboo by hand
+                  </div>
+                </v-card-text> -->
+              </v-card>
+            </v-hover>
           </v-flex>
+
+          <!--=========================================================-->
         </v-layout>
       </v-flex>
     </v-layout>
@@ -83,50 +148,85 @@ export default {
       {
         id: 1,
         foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-31-1-300x300.jpg",
+        nombre: "BRUNO HELGUERO",
+        cargo: "GERENTE DE MARKETING Y COFUNDADOR",
       },
       {
         id: 2,
         foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-2-300x300.jpg",
+        nombre: "STEFANY RAMOS",
+
+        cargo: "GERENTE GENERAL Y COFUNDADORA",
       },
       {
         id: 3,
         foto: "https://yapaydigital.pe/wp-content/uploads/2021/09/Danteazul-300x300.jpg",
+        nombre: "DANTE LOAYZA",
+
+        cargo: "GERENTE REGIONAL Y COMMUNITY MANAGER",
       },
       {
         id: 4,
         foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-32-1.jpg",
+        nombre: "IVÁN URBINA",
+
+        cargo: "FOTÓGRAFO Y DIRECTOR",
       },
       {
         id: 5,
         foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-30-1-300x300.jpg",
+        nombre: "ALVARO SÁNCHEZ",
+
+        cargo: "DIRECTOR AUDIOVISUAL",
       },
       {
         id: 6,
         foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-29-1-300x300.jpg",
+        nombre: "ALEJANDRO COLAN",
+
+        cargo: "DIRECTOR DE ARTE Y DISEÑADOR GRÁFICO",
       },
       {
         id: 7,
         foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-25-1-300x300.jpg",
+        nombre: "GONZALO QUINTEROS",
+
+        cargo: "GERENTE DE OPERACIONES Y PROYECTOS",
       },
       {
         id: 8,
         foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-24-1-300x300.jpg",
+        nombre: "ANTHONY RAMOS",
+
+        cargo: "PRODUCTOR CREATIVO",
       },
       {
         id: 9,
         foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-23-1-300x300.jpg",
+        nombre: "D-LAND",
+
+        cargo: "PROGRAMADOR BACKEND",
       },
       {
         id: 10,
         foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-27-1-300x300.jpg",
+        nombre: "GABRIEL MARTINEZ",
+
+        cargo: "PROGRAMADOR FULLSTACK",
       },
       {
         id: 11,
         foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-1-300x300.jpg",
+        nombre: "ÁNGEL VEGA",
+
+        cargo: "DESARROLLADOR WEB",
       },
       {
         id: 12,
         foto: "https://yapaydigital.pe/wp-content/uploads/2021/11/PerfilYapay-12-de-12-235x300.jpg",
+        nombre: "ALEJANDRO REYES",
+
+        cargo: "PRODUCTOR PUBLICITARIO",
       },
     ],
     name: "",
