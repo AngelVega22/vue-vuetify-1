@@ -29,6 +29,13 @@
               >cursos</router-link
             ></v-btn
           >
+                  <v-btn text>
+            <router-link
+              class="white--text text-decoration-none pa-5"
+              to="/docentes"
+              >docentes</router-link
+            ></v-btn
+          >
           <v-btn text>
             <router-link
               class="white--text text-decoration-none pa-5"
@@ -53,6 +60,6 @@
 export default {
   name: "Navbar",
 
-  components: {},
+  components: {}
 };
 </script>

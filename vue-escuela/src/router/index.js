@@ -27,6 +27,14 @@ const routes = [
   },
   ,
   {
+    path: '/docentes',
+    name: 'Docentes',
+
+
+    component: () => import('../views/Docentes.vue')
+  }
+  ,
+  {
     path: '/contacto',
     name: 'Contacto',
 

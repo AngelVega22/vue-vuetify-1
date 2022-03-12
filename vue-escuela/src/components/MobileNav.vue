@@ -32,6 +32,15 @@
                 >Cursos</router-link
               ></v-btn
             >
+                    <v-btn text>
+              <router-link
+                class="black--text text-decoration-none pa-5"
+                to="/docentes"
+                >docentes</router-link
+              ></v-btn
+            >
+            
+            
             <v-btn text>
               <router-link
                 class="black--text text-decoration-none pa-5"
@@ -39,6 +48,7 @@
                 >Inscríbete</router-link
               ></v-btn
             >
+
             <v-btn text>
               <a
                 target="_blank"
@@ -59,13 +69,13 @@
 export default {
   data: () => ({
     drawer: false,
-    group: null,
+    group: null
   }),
 
   watch: {
     group() {
       this.drawer = false;
-    },
-  },
+    }
+  }
 };
 </script>
