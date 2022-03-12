@@ -225,31 +225,33 @@ export default {
         id: 1,
         nombre: "Facebook y whatsApp",
         subtitulo: "curso de facebook y whatsapp",
-        descripcion: "",
-        url: "img/cursos/CURSO-FACEBOOK-Y-WHATSAPP.jpg",
+        descripcion:
+          "Aprenderás a homologar y gestionar una cuenta de WhatsApp Business en un nivel experto con un Chatbot Inteligente. Empezando con la creación de flujos y la identificación de palabras clave para respuestas automáticas. Seguido de un catálogo de productos y manejo de base de datos. Finalmente, podrá gestionar campañas segmentando adecuadamente a su público objetivo, permitiéndole optimizar sus anuncios.",
+        url: "img/cursos/CURSO-FACEBOOK-Y-WHATSAPP.jpg"
       },
       {
         id: 2,
         nombre: "Taller instagram",
         subtitulo: "taller de instagram",
-        descripcion: "",
-        url: "img/cursos/TALLER-INSTAGRAM.jpg",
-      },
+        descripcion:
+          "En el curso de Instagram Marketing para Empresas y Negocio, aprenderás el uso correcto de la plataforma de Instagram Business. Así como la metodología para la creación de contenido y el uso correcto de los hashtag. También, se realizarán acciones para crecer orgánicamente y se gestionarán anuncios con objetivo de ventas y conversiones de manera eficiente.",
+        url: "img/cursos/TALLER-INSTAGRAM.jpg"
+      }
     ],
-    search: "",
+    search: ""
   }),
   computed: {
-    filteredCourses: function () {
-      return this.categorias.filter((categoria) => {
+    filteredCourses: function() {
+      return this.categorias.filter(categoria => {
         return categoria.subtitulo.match(this.search);
       });
-    },
+    }
   },
   components: {
     Form,
     Navbar,
     MobileNav,
-    Footer,
-  },
+    Footer
+  }
 };
 </script>
