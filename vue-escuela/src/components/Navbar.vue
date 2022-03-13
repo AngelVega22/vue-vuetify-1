@@ -5,7 +5,7 @@
 }
 </style>
 <template>
-  <v-app-bar class="hidden-sm-and-down" prominent>
+  <v-app-bar class="hidden-sm-and-down" prominent >
     <div>
       <v-container>
         <a href="/">

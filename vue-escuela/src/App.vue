@@ -21,7 +21,7 @@ export default {
   components: {
     Navbar,
     MobileNav,
-    Footer,
-  },
+    Footer
+  }
 };
 </script>

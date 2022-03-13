@@ -7,11 +7,11 @@
 
         <v-spacer></v-spacer>
 
-        <v-btn v-for="icon in icons" :key="icon" class="mx-4" dark icon>
+        <!-- <v-btn v-for="icon in icons" :key="icon" class="mx-4" dark icon>
           <v-icon size="24px">
             {{ icon }}
           </v-icon>
-        </v-btn>
+        </v-btn> -->
       </v-card-title>
 
       <v-card-text class="py-2 white--text text-center">
@@ -28,7 +28,7 @@ export default {
   components: {},
   data: () => ({
     drawer: false,
-    group: null,
-  }),
+    group: null
+  })
 };
 </script>

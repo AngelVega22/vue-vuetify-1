@@ -3,34 +3,21 @@
   align-items: center;
   bottom: 0;
   justify-content: center;
-  opacity: 0.8;
+  opacity: 0.9;
   position: absolute;
   width: 100%;
 }
 </style>
-<!--Marketing y publicidad 
-Srefany bruno Álvaro Dante 
 
-Fotografía
-Iván anthony ramos y alejandro reyes 
-
-Díselo grafico y audio visual 
-Alejandro colan , Álvaro , Anthony , Iván y alejandro reyertas 
-
-Desarrollo web 
-Carlos Gabriel ángel Dland 
-
-Coaching y aprendizaje 
-Gonzal y Dante-->
 <template>
-  <v-container>
-    <v-container style="height: 2vh"> </v-container>
-                   <v-flex xs12 md6 lg4 xl3 yapaycolor--text>
+  <v-container >
+    <v-layout wrap align-center justify-center>
+                   <v-flex xs12 sm10 md6 lg4 xl3 yapaycolor--text>
   <h1 
-          class="text-start font-weight-thin"
+          class="text-center font-weight-thin"
           style="font-family: 'Leckerli One', cursive ; font-size:3em; border-bottom:2px solid #FEC200"
-        >Nuestros docentes</h1></v-flex>
-    <v-layout align-center justify-center wrap pa-5 >
+        >Nuestros docentes</h1></v-flex></v-layout>
+    <v-layout align-center justify-center wrap >
  
       <v-flex xs12 lg10  yapaycolor--text >
           
@@ -39,15 +26,16 @@ Gonzal y Dante-->
           style="font-family: 'Leckerli One', cursive"
         >Marketing y publicidad</h1>
                     <!--=========================================================-->
+        <v-divider></v-divider>
 
-        <v-layout wrap > 
+        <v-layout wrap  > 
 
  
           <!--=========================================================-->
           <v-flex v-for="marketingDocente in marketingDocentes" :key="marketingDocente.id" xs6 sm4 md3 lg3 xl3 pa-5>
               
             <v-hover v-slot="{ hover }">
-              <v-card class="mx-auto fill-height" color="grey lighten-4">
+              <v-card class="mx-auto fill-height " color="grey lighten-4" >
                 <v-img :aspect-ratio="8 / 9" :src="marketingDocente.foto">
                   <v-expand-transition>
                     <div
@@ -62,7 +50,8 @@ Gonzal y Dante-->
                       "
                       style="height: 100%"
                     >
-                      {{ marketingDocente.nombre }}
+                
+                         {{ marketingDocente.nombre }}
                     </div>
                   </v-expand-transition>
                 </v-img>
@@ -73,6 +62,7 @@ Gonzal y Dante-->
 
       
         </v-layout>
+        <v-divider></v-divider>
                   <!--=========================================================-->
                 <h1
           class="text-start  mt-5 mb-5 font-weight-thin"
@@ -80,6 +70,7 @@ Gonzal y Dante-->
         >Fotografía
         </h1>
                          <!--=========================================================-->
+        <v-divider></v-divider>
 
         <v-layout wrap>
 
@@ -114,14 +105,18 @@ Gonzal y Dante-->
 
       
         </v-layout>
+                <v-divider></v-divider>
+
                   <!--=========================================================-->
                <!--=========================================================-->
+               
                 <h1
           class="text-start  mt-5 mb-5 font-weight-thin"
           style="font-family: 'Leckerli One', cursive"
         >Diseño grafico y audiovisual
         </h1>
                          <!--=========================================================-->
+        <v-divider></v-divider>
 
         <v-layout wrap>
 
@@ -156,6 +151,8 @@ Gonzal y Dante-->
 
       
         </v-layout>
+                <v-divider></v-divider>
+
                   <!--=========================================================-->
                        <!--=========================================================-->
                 <h1
@@ -164,6 +161,7 @@ Gonzal y Dante-->
         >Desarrollo web
         </h1>
                          <!--=========================================================-->
+        <v-divider></v-divider>
 
         <v-layout wrap>
 
@@ -198,6 +196,8 @@ Gonzal y Dante-->
 
       
         </v-layout>
+                <v-divider></v-divider>
+
                   <!--=========================================================-->
                                  <!--=========================================================-->
                 <h1
@@ -206,6 +206,7 @@ Gonzal y Dante-->
         >Coaching y aprendizaje 
         </h1>
                          <!--=========================================================-->
+        <v-divider></v-divider>
 
         <v-layout wrap>
 
@@ -240,6 +241,8 @@ Gonzal y Dante-->
 
       
         </v-layout>
+                <v-divider></v-divider>
+
                   <!--=========================================================-->
       </v-flex>
     </v-layout>
@@ -350,6 +353,12 @@ export default {
         foto:
           "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-1-300x300.jpg",
         nombre: "ÁNGEL VEGA"
+      },
+      {
+        id: 12,
+        foto:
+          "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-34-1-300x300.jpg",
+        nombre: "CARLOS JIMENEZ"
       }
     ],
     Docentes: [

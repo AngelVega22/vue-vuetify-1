@@ -86,14 +86,17 @@
                         v-on="on"
                         >más información</v-btn
                       >
-                      <v-btn
-                        dark
-                        color="yapaycolor mb-2 "
-                        rounded
-                        href="/contacto"
-                      >
-                        Inscríbete
-                      </v-btn>
+                      <v-btn class="mb-2"
+                            dark
+                            color="yapaycolor  "
+                            rounded
+                          >
+                               <router-link
+              class="white--text text-decoration-none pa-5"
+              to="/contacto"
+              >Inscríbete</router-link>
+            
+                          </v-btn>
                     </template>
                     <template v-slot:default="dialog">
                       <Navbar />
@@ -133,13 +136,16 @@
                         </v-card-text>
 
                         <v-card-actions class="justify-center">
-                          <v-btn
+                        <v-btn
                             dark
                             color="yapaycolor  "
                             rounded
-                            href="/contacto"
                           >
-                            Inscríbete
+                               <router-link
+              class="white--text text-decoration-none pa-5"
+              to="/contacto"
+              >Inscríbete</router-link>
+            
                           </v-btn>
                           <v-btn outlined rounded @click="dialog.value = false"
                             >Más cursos</v-btn
