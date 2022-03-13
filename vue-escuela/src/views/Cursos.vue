@@ -127,7 +127,9 @@
                                   {{ categoria.descripcion }}
                                 </div>
                               </v-container>
-                              <Form />
+                                                <iframe src="https://yapaydigital.pe/form/" width="100%" height="550" frameborder="0"></iframe>
+
+                              <!-- <Form /> -->
                             </v-flex>
                           </v-layout>
                           <!-- <div class="text-h6 pa-5">

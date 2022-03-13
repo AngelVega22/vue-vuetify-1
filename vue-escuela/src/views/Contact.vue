@@ -18,7 +18,7 @@
     <v-layout align-center justify-center wrap>
       <v-flex xs12 lg5 rounded-lg pa-5>
         <v-container pa-5>
-          <form>
+          <!-- <form>
             <h1>Escríbenos</h1>
             <v-text-field
               v-model="name"
@@ -56,7 +56,9 @@
             ></v-checkbox>
 
             <v-btn class="mr-4" @click="submit"> Enviar </v-btn>
-          </form>
+          </form> -->
+                  <iframe src="https://yapaydigital.pe/form/" width="100%" height="600" frameborder="0"></iframe>
+
         </v-container>
       </v-flex>
       <v-flex xs12 lg6 pa-5>
