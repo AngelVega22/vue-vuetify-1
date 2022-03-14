@@ -48,7 +48,7 @@
     <v-layout justify-center align-center wrap>
       <v-flex
         v-for="categoria in filteredCourses"
-        mb-1
+        mb-8
         :key="categoria.id"
         xs12
         sm10
@@ -116,19 +116,36 @@
                           <div class="text-h3 pa-5"></div>
                           <v-layout wrap>
                             <v-flex xs12 lg6>
+                                  <div class="text-h4 mb-3">
+                                {{ categoria.nombre }}
+                              </div>
                               <v-img :src="categoria.url"></v-img>
+                              <v-container mt-5>
+                                <!-- <div class="text-h4 px-5">
+                                {{ categoria.nombre }}
+                              </div> -->
+                              <v-container >
+                                <div>
+                                 <p style="font-size: 18px;   text-align: justify;
+ "> {{ categoria.descripcion }} </p>
+                                </div>
+                              </v-container> 
+                              </v-container >
                             </v-flex>
+                            
                             <v-flex xs12 lg6>
-                              <div class="text-h4 px-5">
+                              <!-- <div class="text-h4 px-5">
                                 {{ categoria.nombre }}
                               </div>
                               <v-container pa-5>
                                 <div>
                                   {{ categoria.descripcion }}
                                 </div>
-                              </v-container>
+                              </v-container> -->
+                              <v-container mt-10>
+                                <div class="text-h4 mb-3 text-center">SOLICITA INFORMACIÓN Y <br> OBTÉN UN DESCUENTO</div>
                                                 <iframe src="https://yapaydigital.pe/form/" width="100%" height="550" frameborder="0"></iframe>
-
+</v-container>
                               <!-- <Form /> -->
                             </v-flex>
                           </v-layout>
@@ -244,6 +261,14 @@ export default {
         descripcion:
           "En el curso de Instagram Marketing para Empresas y Negocio, aprenderás el uso correcto de la plataforma de Instagram Business. Así como la metodología para la creación de contenido y el uso correcto de los hashtag. También, se realizarán acciones para crecer orgánicamente y se gestionarán anuncios con objetivo de ventas y conversiones de manera eficiente.",
         url: "img/cursos/TALLER-INSTAGRAM.jpg"
+      },
+      {
+        id: 3,
+        nombre: "Curso Community Manager",
+        subtitulo: "curso community manager",
+        descripcion:
+          "El curso de Community Manager aprenderás a gestionar las redes sociales en un nivel experto, desarrollar un proyecto real con objetivos de venta, todo ello bajo una metodología dinámica teórico y práctica, con conocimientos en cápsulas específicos. Aprenderás a crear y optimizar un fanpage, conocer los diferentes tipos de publicaciones, entender las estadísticas y realizar informes, redacción creativa, contenido con tendencia viral, automatizar tus respuestas, homologar tus redes sociales, segmentar en un nivel avanzado, utilizar el píxel de Facebook, crear públicos personalizados y realizar campañas de remarketing, optimizar los anuncios en base a un ROI, tanto en Facebook como en Instagram.",
+        url: "img/cursos/CURSO-COMMUNITY-MANAGER.jpg"
       }
     ],
     search: ""

@@ -15,7 +15,9 @@
       </v-card-title>
 
       <v-card-text class="py-2 white--text text-center">
-        {{ new Date().getFullYear() }} — <strong>Angel Vega</strong>
+     Copyright ©     {{ new Date().getFullYear() }} — <strong>– Agencia Digital Yapay | Todos los derechos reservados.
+
+</strong>
       </v-card-text>
     </v-card>
   </v-footer>
