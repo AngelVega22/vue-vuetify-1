@@ -9,11 +9,8 @@
 }
 </style>
 <template>
-
   <v-container>
-    <v-container style="height: 2vh"> 
-      
-    </v-container>
+    <v-container style="height: 2vh"> </v-container>
 
     <v-layout align-center justify-center wrap>
       <v-flex xs12 lg5 rounded-lg pa-5>
@@ -57,8 +54,12 @@
 
             <v-btn class="mr-4" @click="submit"> Enviar </v-btn>
           </form> -->
-                  <iframe src="https://yapaydigital.pe/form/" width="100%" height="600" frameborder="0"></iframe>
-
+          <iframe
+            src="https://yapaydigital.pe/form/"
+            width="100%"
+            height="600"
+            frameborder="0"
+          ></iframe>
         </v-container>
       </v-flex>
       <v-flex xs12 lg6 pa-5>
@@ -68,7 +69,7 @@
           </v-flex> -->
 
           <!--=========================================================-->
-          <v-flex v-for="staff in staffs" :key="staff.id" xs6 sm4 md3 lg4 xl3>
+          <v-flex v-for="staff in staffs" :key="staff.id" xs12 sm4 md3 lg3 xl3>
             <v-hover v-slot="{ hover }">
               <v-card class="mx-auto fill-height" color="grey lighten-4">
                 <v-img :aspect-ratio="9 / 9" :src="staff.foto">
@@ -142,107 +143,103 @@ export default {
     checkbox: {
       checked(val) {
         return val;
-      }
-    }
+      },
+    },
   },
 
   data: () => ({
     staffs: [
       {
         id: 1,
-        foto:
-          "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-31-1-300x300.jpg",
+        foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-31-1-300x300.jpg",
         nombre: "BRUNO HELGUERO",
-        cargo: "GERENTE DE MARKETING Y COFUNDADOR"
+        cargo: "GERENTE DE MARKETING Y COFUNDADOR",
       },
       {
         id: 2,
-        foto:
-          "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-2-300x300.jpg",
+        foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-2-300x300.jpg",
         nombre: "STEFANY RAMOS",
 
-        cargo: "GERENTE GENERAL Y COFUNDADORA"
+        cargo: "GERENTE GENERAL Y COFUNDADORA",
       },
       {
+        id: 13,
+        foto: " https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-34-1-300x300.jpg",
+        nombre: "CARLOS JIMENEZ",
+
+        cargo: "GERENTE DE TECNOLOGÍA E INFORMACIÓN Y COFUNDADOR",
+      },
+
+      {
         id: 3,
-        foto:
-          "https://yapaydigital.pe/wp-content/uploads/2021/09/Danteazul-300x300.jpg",
+        foto: "https://yapaydigital.pe/wp-content/uploads/2021/09/Danteazul-300x300.jpg",
         nombre: "DANTE LOAYZA",
 
-        cargo: "GERENTE REGIONAL Y COMMUNITY MANAGER"
+        cargo: "GERENTE REGIONAL Y COMMUNITY MANAGER",
       },
       {
         id: 4,
-        foto:
-          "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-32-1.jpg",
+        foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-32-1.jpg",
         nombre: "IVÁN URBINA",
 
-        cargo: "FOTÓGRAFO Y DIRECTOR"
+        cargo: "FOTÓGRAFO Y DIRECTOR",
       },
       {
         id: 5,
-        foto:
-          "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-30-1-300x300.jpg",
+        foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-30-1-300x300.jpg",
         nombre: "ALVARO SÁNCHEZ",
 
-        cargo: "DIRECTOR AUDIOVISUAL"
+        cargo: "DIRECTOR AUDIOVISUAL",
       },
       {
         id: 6,
-        foto:
-          "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-29-1-300x300.jpg",
+        foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-29-1-300x300.jpg",
         nombre: "ALEJANDRO COLAN",
 
-        cargo: "DIRECTOR DE ARTE Y DISEÑADOR GRÁFICO"
+        cargo: "DIRECTOR DE ARTE Y DISEÑADOR GRÁFICO",
       },
       {
         id: 7,
-        foto:
-          "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-25-1-300x300.jpg",
+        foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-25-1-300x300.jpg",
         nombre: "GONZALO QUINTEROS",
 
-        cargo: "GERENTE DE OPERACIONES Y PROYECTOS"
+        cargo: "GERENTE DE OPERACIONES Y PROYECTOS",
       },
       {
         id: 8,
-        foto:
-          "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-24-1-300x300.jpg",
+        foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-24-1-300x300.jpg",
         nombre: "ANTHONY RAMOS",
 
-        cargo: "PRODUCTOR CREATIVO"
+        cargo: "PRODUCTOR CREATIVO",
       },
       {
         id: 9,
-        foto:
-          "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-23-1-300x300.jpg",
+        foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-23-1-300x300.jpg",
         nombre: "D-LAND",
 
-        cargo: "PROGRAMADOR BACKEND"
+        cargo: "PROGRAMADOR BACKEND",
       },
       {
         id: 10,
-        foto:
-          "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-27-1-300x300.jpg",
+        foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-27-1-300x300.jpg",
         nombre: "GABRIEL MARTINEZ",
 
-        cargo: "PROGRAMADOR FULLSTACK"
+        cargo: "PROGRAMADOR FULLSTACK",
       },
       {
         id: 11,
-        foto:
-          "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-1-300x300.jpg",
+        foto: "https://yapaydigital.pe/wp-content/uploads/2021/08/New-Project-1-300x300.jpg",
         nombre: "ÁNGEL VEGA",
 
-        cargo: "DESARROLLADOR WEB"
+        cargo: "DESARROLLADOR WEB",
       },
       {
         id: 12,
-        foto:
-          "https://yapaydigital.pe/wp-content/uploads/2021/11/PerfilYapay-12-de-12-235x300.jpg",
+        foto: "https://yapaydigital.pe/wp-content/uploads/2021/11/PerfilYapay-12-de-12-235x300.jpg",
         nombre: "ALEJANDRO REYES",
 
-        cargo: "PRODUCTOR PUBLICITARIO"
-      }
+        cargo: "PRODUCTOR PUBLICITARIO",
+      },
     ],
     name: "",
     email: "",
@@ -254,9 +251,9 @@ export default {
       "Web y Seo",
       "Coaching y aprendizaje",
       "Fotografía",
-      "Marketing y publicidad"
+      "Marketing y publicidad",
     ],
-    checkbox: false
+    checkbox: false,
   }),
 
   computed: {
@@ -286,13 +283,13 @@ export default {
       !this.$v.email.email && errors.push("Must be valid e-mail");
       !this.$v.email.required && errors.push("E-mail is required");
       return errors;
-    }
+    },
   },
 
   methods: {
     submit() {
       this.$v.$touch();
-    }
+    },
     // clear() {
     //   this.$v.$reset();
     //   this.name = "";
@@ -300,6 +297,6 @@ export default {
     //   this.select = null;
     //   this.checkbox = false;
     // },
-  }
+  },
 };
 </script>
